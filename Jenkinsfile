@@ -11,6 +11,7 @@ pipeline{
 		stage ("initialize") {
 			steps {
 			echo "Hello initializing"
+			}
 		
 		}
 	}   
