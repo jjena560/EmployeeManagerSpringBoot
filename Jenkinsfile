@@ -11,32 +11,14 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-				echo 'mvn initialize'
+				bat 'mvn package'
 			}
 		
 		}
 		
-		stage('Testing Stage'){
-			steps{
-				withMaven(maven : 'Maven'){
-					echo 'mvn test'
-					
-								
-				}
-			}
 		
-		}
 		
-		stage('Deployment Stage'){
-			steps{
-				withMaven(maven : 'Maven'){
-					echo 'mvn deploy'
-					
-								
-				}
-			}
 		
-		}
 	}   
         
 }
