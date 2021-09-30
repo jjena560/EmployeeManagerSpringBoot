@@ -10,48 +10,9 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-			bat '''
-			echo "PATH = ${PATH}"
-			echo "M2_HOME = ${M2_HOME}"
-			'''
-			}
+			echo "Hello initializing"
 		
 		}
-	
-	
-	
-        stage('build') {
-            steps {
-            	withMaven(maven : 'Maven'){
-					echo 'Hello this is build'
-                	bat 'mvn install'
-					
-								
-				}
-                
-            }
-        }
+	}   
         
-        stage('Testing Stage'){
-			steps{
-				withMaven(maven : 'Maven'){
-					bat 'mvn test'
-					
-								
-				}
-			}
-		
-		}
-		
-		stage('Deployment Stage'){
-			steps{
-				withMaven(maven : 'Maven'){
-					bat 'mvn deploy'
-					
-								
-				}
-			}
-		
-		}
-    }
 }
