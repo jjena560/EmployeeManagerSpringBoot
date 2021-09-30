@@ -10,7 +10,7 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-			sh 'mvb build'
+			sh 'mvn build'
 			}
 		
 		}
