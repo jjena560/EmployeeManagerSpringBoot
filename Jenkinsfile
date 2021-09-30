@@ -10,7 +10,7 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-			echo "Hello initializing"
+			sh 'mvb build'
 			}
 		
 		}
