@@ -11,7 +11,7 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-				echo 'mvn
+				echo 'mvn initialize'
 			}
 		
 		}
