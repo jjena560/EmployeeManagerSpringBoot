@@ -28,6 +28,11 @@ public class MyController {
 		return "Welcome to rest api";
 	}
 
+	@GetMapping("/")
+	public String homeScreen() {
+		return "Welcome to rest api";
+	}
+
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees() {
 		return service.getEmployees();
