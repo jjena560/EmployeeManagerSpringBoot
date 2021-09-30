@@ -11,7 +11,29 @@ pipeline{
 	stages {
 		stage ("initialize") {
 			steps {
-			bat 'mvn clean install'
+				echo 'mvn
+			}
+		
+		}
+		
+		stage('Testing Stage'){
+			steps{
+				withMaven(maven : 'maven3.6'){
+					echo 'mvn test'
+					
+								
+				}
+			}
+		
+		}
+		
+		stage('Deployment Stage'){
+			steps{
+				withMaven(maven : 'maven3.6'){
+					echo 'mvn deploy'
+					
+								
+				}
 			}
 		
 		}
